@@ -5,7 +5,6 @@
     "sourceType": "module"
   },
   "plugins": ["@typescript-eslint", "prettier"],
-  // HERE
   "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
 
   "rules": {
