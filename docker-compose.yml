@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+
+  mongo:
+    image: mongo
+    container_name: mongoose
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - ./data:/data/db
+
+  mongo-express:
+    image: mongo-express
+    container_name: mongoose-mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_URL: mongodb://mongo:27017/
